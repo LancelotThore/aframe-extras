@@ -46437,9 +46437,8 @@
             vTo = this.body.position.clone();
     
         ray = new CANNON.Ray(vFrom, vTo);
-        ray._updateDirection(); // TODO - Report bug.
+        //ray._updateDirection(); // TODO - Report bug.
         ray.intersectBody(groundBody);
-    
         if (!ray.hasHit) return groundNormal;
     
         // Compare ABS, in case we're projecting against the inside of the face.
